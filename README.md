@@ -52,6 +52,37 @@ Data preprocessing, pretraining, finetuning, hyperparameter search, model evalua
 
 An example notebook for [inference](notebooks/5_inference_on_open_data.ipynb) is available to help you get started reconstructing spectra from an `msp` file once you have your model trained.
 
+For the process used to fine-tune on a specific NIST library edition (data regeneration, the exact training invocation, and verification), see [docs/NIST_FINETUNING.md](docs/NIST_FINETUNING.md).
+
+## 🐳 Running as a service (Docker)
+A FastAPI service (`spectus/service.py`) wraps the same inference pipeline as `spectus/predict.py` behind an HTTP API, for deployment as a long-running container (e.g. on ECS/Fargate). The image is CUDA-enabled but runs fine on CPU-only hosts too — it auto-detects the device at startup. Model weights are **not** baked into the image; mount your checkpoint directory at runtime.
+
+Build the image:
+```bash
+docker build -t spectus-service .
+```
+
+Run it, mounting a trained checkpoint directory:
+```bash
+docker run -d -p 8000:8000 \
+  -v /path/to/your/checkpoint:/app/checkpoint:ro \
+  spectus-service
+```
+
+Check it's ready, then send a spectrum (`mz` and `intensity` arrays, same length, from a spectrum you have rights to use) for prediction:
+```bash
+curl localhost:8000/health
+# {"status":"ok"}
+
+curl -X POST localhost:8000/predict -H "Content-Type: application/json" -d '{
+  "mz": [<your m/z values>],
+  "intensity": [<your intensity values>]
+}'
+# {"predictions": {"<SMILES>": <score>, ...}}
+```
+
+`num_beams` and `num_return_sequences` (both default 10) can be overridden per-request in the JSON body.
+
 ## 📄 Citation
 If you use **SpecTUS** in your research, please cite our paper published in *Analytical Chemistry*:
 ```

@@ -24,13 +24,13 @@ dependencies:
   - comm=0.1.2=py38h06a4308_0
   - conda-pack=0.7.1=pyhd8ed1ab_0
   - cryptography=39.0.1=py38h9ce1e76_0
-  - cuda-cudart=11.8.89=0
-  - cuda-cupti=11.8.87=0
-  - cuda-libraries=11.8.0=0
-  - cuda-nvrtc=11.8.89=0
-  - cuda-nvtx=11.8.86=0
-  - cuda-runtime=11.8.0=0
-  - cudatoolkit=11.3.1=h2bc3f7f_2
+  - cuda-cudart=12.1.55=0
+  - cuda-cupti=12.1.62=0
+  - cuda-libraries=12.1.0=0
+  - cuda-nvrtc=12.1.55=0
+  - cuda-nvtx=12.1.66=0
+  - cuda-runtime=12.1.0=0
+  - cuda-toolkit=12.1.0=0
   - cycler=0.11.0=pyhd8ed1ab_0
   - debugpy=1.5.1=py38h295c915_0
   - decorator=5.1.1=pyhd3eb1b0_0
@@ -66,12 +66,12 @@ dependencies:
   - lcms2=2.12=h3be6417_0
   - ld_impl_linux-64=2.38=h1181459_1
   - lerc=3.0=h295c915_0
-  - libcublas=11.11.3.6=0
-  - libcufft=10.9.0.58=0
+  - libcublas=12.1.0.26=0
+  - libcufft=11.0.2.4=0
   - libcufile=1.8.1.2=0
   - libcurand=10.3.4.107=0
-  - libcusolver=11.4.1.48=0
-  - libcusparse=11.7.5.86=0
+  - libcusolver=11.4.4.55=0
+  - libcusparse=12.0.2.55=0
   - libdeflate=1.17=h5eee18b_0
   - libffi=3.4.2=h6a678d5_6
   - libgcc-ng=11.2.0=h1234567_1
@@ -79,8 +79,8 @@ dependencies:
   - libgomp=11.2.0=h1234567_1
   - libiconv=1.16=h7f8727e_2
   - libidn2=2.3.2=h7f8727e_0
-  - libnpp=11.8.0.86=0
-  - libnvjpeg=11.9.0.86=0
+  - libnpp=12.0.2.50=0
+  - libnvjpeg=12.1.0.39=0
   - libpng=1.6.39=h5eee18b_0
   - libsm-cos6-x86_64=1.2.1=h9b0a68f_1105
   - libsodium=1.0.18=h7b6447c_0
@@ -134,8 +134,8 @@ dependencies:
   - python=3.8.16=h7a1cb2a_3
   - python-dateutil=2.8.2=pyhd3eb1b0_0
   - python_abi=3.8=2_cp38
-  - pytorch=2.0.0=py3.8_cuda11.8_cudnn8.7.0_0
-  - pytorch-cuda=11.8=h7e8668a_5
+  - pytorch=2.1.0
+  - pytorch-cuda=12.1.0
   - pytorch-mutex=1.0=cuda
   - pytz=2023.3=pyhd8ed1ab_0
   - pyzmq=23.2.0=py38h6a678d5_0
@@ -150,9 +150,9 @@ dependencies:
   - sympy=1.12=py38h06a4308_0
   - sysroot_linux-64=2.12=he073ed8_15
   - tk=8.6.12=h1ccaba5_0
-  - torchaudio=2.0.0=py38_cu118
-  - torchtriton=2.0.0=py38
-  - torchvision=0.15.0=py38_cu118
+  - torchaudio=2.1.0
+  - torchtriton=2.1.0
+  - torchvision=0.16.0
   - tornado=6.2=py38h5eee18b_0
   - tqdm=4.66.1=pyhd8ed1ab_0
   - traitlets=5.7.1=py38h06a4308_0

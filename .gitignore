@@ -25,8 +25,11 @@ FastEI/**
 
 # big files
 data/categorized_michal.csv
-# predictions/**/*.jsonl
+predictions/**/*.jsonl
 tokenizer/training_data/*.txt
+
+# pretrained checkpoint - freely available on HuggingFace, re-fetch instead of committing
+data/models/
 deep-molecular-massspec/tmp
 tokenizer/training_data/1M.txt
 

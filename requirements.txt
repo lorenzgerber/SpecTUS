@@ -1,0 +1,15 @@
+# torch comes from the base image (pytorch/pytorch:2.0.0-cuda11.7-cudnn8-runtime),
+# matching the exact version this model was trained/validated with.
+transformers==4.31.0
+tokenizers==0.13.3
+torchdata==0.6.0
+rdkit==2023.3.2
+matchms==0.24.2
+selfies==2.1.0
+numpy==1.23.5
+pandas==2.0.3
+pyyaml==6.0.1
+typer==0.9.0
+peft==0.9.0
+fastapi==0.103.2
+uvicorn[standard]==0.23.2
